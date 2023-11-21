@@ -3,6 +3,8 @@ package conta_bancaria;
 import java.util.Scanner;
 
 import conta_bancaria.model.Conta;
+import conta_bancaria.model.ContaCorrente;
+import conta_bancaria.model.ContaPoupanca;
 import conta_bancaria.util.Cores;
 
 public class Menu {
@@ -23,6 +25,15 @@ public class Menu {
 		c1.visualizar();
 		c1.depositar(5000.00f);
 		c1.visualizar();
+		
+		ContaCorrente cc1 = new ContaCorrente(3, 456, 1, "Felipe", 100000.00f, 2000.00f);
+		cc1.visualizar();
+		cc1.sacar(101000.00f);
+		cc1.visualizar();
+		
+		ContaPoupanca cp = new ContaPoupanca(3, 123, 2, "Betty", 200000.00f, 21);
+		cp.visualizar();
+		
 
 		while (true) {
 			
@@ -57,14 +68,14 @@ public class Menu {
 			}
 
 			switch (opcao) {
-				case 1 -> System.out.println();
-				case 2 -> System.out.println();
-				case 3 -> System.out.println();
-				case 4 -> System.out.println();
-				case 5 -> System.out.println();
-				case 6 -> System.out.println();
-				case 7 -> System.out.println();
-				case 8 -> System.out.println();
+				case 1 -> System.out.println(Cores.TEXT_WHITE + "Criar Conta");
+				case 2 -> System.out.println("Listar todas as Contas");
+				case 3 -> System.out.println("Consultar dados da Conta - por número");
+				case 4 -> System.out.println("Atualizar dados da Conta");
+				case 5 -> System.out.println("Apagar a Conta");
+				case 6 -> System.out.println("Saque");
+				case 7 -> System.out.println("Depósito");
+				case 8 -> System.out.println("Transferência entre Contas");
 				default -> System.out.println("\nOpção Inválida! Tente novamente\n");
 			}
 
