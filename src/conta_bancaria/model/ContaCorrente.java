@@ -39,7 +39,7 @@ public class ContaCorrente extends Conta {
 	@Override
 	public void visualizar() {
 		super.visualizar();
-		System.out.print("Limite da conta: " + this.limite); // Chama o Método get
+		System.out.print("  Limite da conta: " + this.limite); // Chama o Método get
 		System.out.println();
 	}
 }

@@ -88,11 +88,11 @@ public abstract class Conta {
 		System.out.println("\n\n***********************************");
 		System.out.println("\n       Dados da Conta\n          ");
 		System.out.println("***********************************\n");
-		System.out.println("Número da conta: " + this.numero);
-		System.out.println("Agência: " + this.agencia);
-		System.out.println("Tipo da conta: " + tipo);
-		System.out.println("Titular da conta: " + this.titular);
-		System.out.println("Saldo da conta: " + this.saldo);
+		System.out.println("  Número da conta: " + this.numero);
+		System.out.println("  Agência: " + this.agencia);
+		System.out.println("  Tipo da conta: " + tipo);
+		System.out.println("  Titular da conta: " + this.titular);
+		System.out.println("  Saldo da conta: " + this.saldo);
 	}
 
 }
