@@ -10,6 +10,12 @@ public class ContaCorrente extends Conta {
 	}
 
 	public float getLimite() {
+		
+		// Atualiza o limite caso o saldo seja negativo
+		
+		if(this.getSaldo() < 0)
+			return this.limite - Math.abs(this.getSaldo());
+				
 		return limite;
 	}
 
@@ -21,21 +27,19 @@ public class ContaCorrente extends Conta {
 	public boolean sacar(float valor) {
 
 		if (this.getSaldo() + this.getLimite() < valor) {
-			System.out.println("\nSaldo Insuficiente!");
+			System.out.println("\nSaldo Insuficiente");
 			return false;
 		}
 
 		this.setSaldo(this.getSaldo() - valor);
 		
-		if(this.getSaldo() < 0 ) 
-			this.setLimite(this.getLimite() - Math.abs(this.getSaldo()));
-			return true;
+		return true;
 	}
 
 	@Override
 	public void visualizar() {
 		super.visualizar();
-		System.out.println("Limite da conta: " + this.limite);
+		System.out.print("Limite da conta: " + this.limite); // Chama o Método get
 		System.out.println();
 	}
 }
